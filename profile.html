@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/register.css">
+    <title>Trang cá nhân</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="#">Về chúng tôi</a></li>
+                    <li><a href="#">Liên hệ</a></li>
+                    <li><a href="profile.html">Trang cá nhân</a></li>
+                </ul>
+                <a class="logo-link" href="index.html"><img class="logo" src="./images/logo.png" alt="logo">
+                </a>
+                <ul id="account">
+                    <li><a href="login.html">Đăng nhập</a></li>
+                    <span>/</span>
+                    <li><a href="register.html">Đăng ký</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="main">
+        <div class="wrapper-register">
+            <h1>Trang cá nhân</h1>
+            <form onsubmit="submitForm(event)">
+                <label>Họ Và Tên:</label>
+                <input id="inputId" type="name">
+                <label>Email:</label>
+                <input id="email" type="email" readonly>
+                <label>Mật Khẩu:</label>
+                <input id="password" type="password">
+                <label>Nhập lại mật khẩu:</label>
+                <input id="retype" type="password">
+                <label>Số điện thoại:</label>
+                <input id="phone" type="tel">
+                <label>Địa Chỉ:</label>
+                <input id="address" type="address">
+                <input onchange="handleSubmit(e)"  class="button"  type="submit" value="Cập nhật">
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="logo">
+                <div>
+                    <img src="./images/logo-footer.png" alt="logo">
+                    <img src="./images/img.png" alt="logo">
+                    <img src="./images/img2.png" alt="logo">
+                </div>
+                <p>Công ty Cổ phần Dự Kim</p>
+                <p>Địa chỉ đăng ký: Tổ dân phố Tháp, P.Đại Mỗ, Q.Nam</p>
+                <p>Email: cskh@ivy.com.vn</p>
+            </div>
+            <ul class="foot__about">
+                <li>Giới thiệu</li>
+                <li>Về IVY moda</li>
+                <li>Tuyển dụng</li>
+                <li>Hệ thống cửa hàng</li>
+                <li>Hệ thống cửa hàng</li>
+            </ul>
+            <ul class="foot__about">
+                <li>Dịch vụ khách hàng</li>
+                <li>Chính sách điều khoản</li>
+                <li>Chính sách thanh toán</li>
+                <li>Chính sách thẻ thành viên</li>
+                <li>Chính sách giao nhận vận chuyển</li>
+            </ul>
+            <ul class="foot__about">
+                <li>Liên hệ</li>
+                <li>Hotline</li>
+                <li>Email</li>
+                <li>Live Chat</li>
+                <li>Messenger</li>
+            </ul>
+        </div>
+    </footer>
+</body>
+<script src="./javascript/profile.js"></script>
+</html>
