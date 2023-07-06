@@ -3,7 +3,7 @@ var renderLogin = document.getElementById("account")
 console.log(renderLogin);
 if(loginActive !== null) {
     renderLogin.innerHTML=`<ul id="account">
-    <li><a href="profile.html">Trang cá nhân</a></li>
+    <li><a href="profile.html">${loginActive.name}</a></li>
     <span>/</span>
     <li><a onclick="handleLogout()">Đăng xuất</a></li>
 </ul>`

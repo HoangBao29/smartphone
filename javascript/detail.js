@@ -6,73 +6,63 @@ var param = currentLocation.slice(-1);
 const data = [
     {
         id: 1,
-        image: "./images/item11.jpg",
-        name: "Điện thoại iPhone 14 Pro Max 128GB",
-        price: 2100000,
-        description: "iPhone 14 Pro Max một siêu phẩm trong giới smartphone được nhà Táo tung ra thị trường vào tháng 09/2022. Máy trang bị con chip Apple A16 Bionic vô cùng mạnh mẽ, đi kèm theo đó là thiết kế hình màn hình mới."
+        image: "./images/item1.jpg",
+        name: "iPhone 14 Pro 128GB",
+        price: 2100000
     },
     {
         id: 2,
-        image: "./images/item12.jpg",
-        name: "Điện thoại Xiaomi Redmi 12 4GB",
-        price: 1900000,
-        description: "Xiaomi Redmi 12 khoác lên mình một vẻ ngoài cá tính, màn hình lớn đem đến trải nghiệm đã mắt cùng một hiệu năng ổn định với mọi tác vụ."
+        image: "./images/item2.jpg",
+        name: "Xiaomi Redmi 12 4GB",
+        price: 1900000
     },
     {
         id: 3,
-        image: "./images/item13.jpg",
-        name: "Điện thoại Samsung Galaxy A14 6GB",
-        price: 1320000,
-        description: "Samsung Galaxy A14 4G với thiết kế độc đáo và hiện đại, sản phẩm này đáp ứng đầy đủ tiêu chí ngon - bổ - rẻ với cấu hình ổn định và giá cả cực kỳ hợp lý."
+        image: "./images/item3.jpg",
+        name: "Samsung Galaxy A14 6GB",
+        price: 1320000
     },
     {
         id: 4,
-        image: "./images/item14.jpg",
-        name: "Điện thoại iPhone 14 Pro 128GB",
-        price: 3620000,
-        description: "iPhone 14 Pro 128GB - Mẫu smartphone đến từ nhà Apple được mong đợi nhất năm 2022, lần này nhà Táo mang đến cho chúng ta một phiên bản với kiểu thiết kế hình notch mới."
+        image: "./images/item4.jpg",
+        name: "iPhone 14 Pro 128GB",
+        price: 3620000
     },
     {
         id: 5,
-        image: "./images/item15.jpg",
-        name: "Điện thoại Samsung Galaxy A24 6GB ",
-        price: 9820000,
-        description: "Samsung Galaxy A24 6GB nổi bật với giá thành rẻ, màn hình Super AMOLED cùng camera 50 MP chụp ảnh sắc nét."
+        image: "./images/item7.png",
+        name: "Samsung Galaxy A24 6GB ",
+        price: 9820000
     },
     {
         id: 6,
-        image: "./images/item16.jpg",
-        name: "Điện thoại Vivo Y36",
-        price: 6231000,
-        description: "Vivo Y36 chiếc điện thoại Vivo Y sở hữu vẻ ngoài hiện đại trẻ trung, màn hình hiển thị sắc nét cùng một hiệu năng ổn định với các tác vụ hằng ngày."
+        image: "./images/item6.png",
+        name: "Điện thoại Xiaomi Y36",
+        price: 6231000
     },
     {
         id: 7,
-        image: "./images/item17.jpg",
-        name: "Điện thoại Xiaomi Redmi 12C 64GB",
-        price: 3265000,
-        description: "Xiaomi Redmi 12C 64GB một thiết bị di động tầm trung được giới thiệu bởi Xiaomi, với cấu hình vượt trội so với các đối thủ trong cùng phân khúc."
+        image: "./images/item7.png",
+        name: "Xiaomi Redmi 12C 64GB",
+        price: 3265000
     },
     {
         id: 8,
-        image: "./images/item18.jpg",
-        name: "Điện thoại OPPO Reno8 T 5G 256GB",
-        price: 1023000,
-        description: "Tiếp nối sự thành công rực rỡ đến từ các thế hệ trước đó thì chiếc OPPO Reno8 T 5G 256GB cuối cùng đã được giới thiệu chính thức tại Việt Nam, được định hình là dòng sản phẩm thuộc phân khúc tầm trung."
+        image: "./images/item8.png",
+        name: "OPPO Reno8 T 5G 256GB",
+        price: 1023000
     },
     {
         id: 9,
-        image: "./images/item19.jpg",
-        name: "Điện thoại Samsung Galaxy S23 Ultra 5G 256GB",
-        price: 2030000,
-        description: "Samsung Galaxy S23 Ultra 5G 256GB là chiếc smartphone cao cấp nhất của nhà Samsung, sở hữu cấu hình không tưởng với con chip khủng được Qualcomm tối ưu riêng cho dòng Galaxy."
+        image: "./images/item9.png",
+        name: "Samsung Galaxy S23 256GB",
+        price: 2030000
     },
     {
         id: 10,
-        image: "./images/item20.jpg",
+        image: "./images/item10.png",
         name: "Điện thoại realme C55 6GB",
-        price: 1890000,
-        description: "Gần đây, chiếc điện thoại realme C55 đã được giới thiệu chính thức với bộ thông số kỹ thuật đáng chú ý và giá cả phù hợp cho người dùng."
+        price: 1890000
     }
 ]
 
@@ -84,12 +74,39 @@ console.log(product);
 var elementCard = document.querySelector(".product");
 elementCard.innerHTML = `<div><img src=${product.image} alt="item1"></div>
 <div class="product__content">
-    <h1>${product.name}</h1>
-    <span>Giá:</span>
-    <span>${product.price}</span>
-    <button>Mua hàng</button>
-    <p>Giới thiệu</p>
-    <p>${product.description}</p>
+    <h1 style="font-size: 36px">Tên sản phẩm: ${product.name}</h1>
+    <span class="custom">Giá:</span>
+    <span class="custom">${product.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</span>
+    <div class='technical'>
+                        <p>Thông số kỹ thuật:</p>
+                        <ul>
+                            <li>
+                                <i class="bi bi-display"></i>
+                                <span> 6.43 inch, AMOLED, FHD+, 1080 x 2400 Pixels</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-camera"></i>
+                                <span>64.0 MP + 2.0 MP + 2.0 MP</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-camera-video"></i>
+                                <span>16.0 MP</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-cpu"></i>
+                                <span>Snapdragon 695</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-memory"></i>
+                                <span>128 GB</span>
+                            </li>
+                            <li>
+                                <i class="bi bi-battery-half"></i>
+                                <span>4000 mAh</span>
+                            </li>
+                        </ul>
+    </div>
+    <div class="custom-but"><button>Mua ngay</button></div>
 </div>`
 const sameProduct = data.filter((value)=>{
    return (

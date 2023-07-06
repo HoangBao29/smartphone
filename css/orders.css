@@ -35,3 +35,14 @@ h2 {
 .wrapper-table {
     padding-bottom: 40px;
 }
+
+.main .container {
+    background-color: #fafafa;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.table tbody:nth-of-type(2) tr:hover {
+    color: red;
+    cursor: pointer;
+}

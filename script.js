@@ -3,61 +3,61 @@
 const data = [
     {
         id: 1,
-        image: "./images/item11.jpg",
-        name: "Điện thoại iPhone 14 Pro Max 128GB",
+        image: "./images/item1.jpg",
+        name: "iPhone 14 Pro 128GB",
         price: 2100000
     },
     {
         id: 2,
-        image: "./images/item12.jpg",
-        name: "Điện thoại Xiaomi Redmi 12 4GB",
+        image: "./images/item2.jpg",
+        name: "Xiaomi Redmi 12 4GB",
         price: 1900000
     },
     {
         id: 3,
-        image: "./images/item13.jpg",
-        name: "Điện thoại Samsung Galaxy A14 6GB",
+        image: "./images/item3.jpg",
+        name: "Samsung Galaxy A14 6GB",
         price: 1320000
     },
     {
         id: 4,
-        image: "./images/item14.jpg",
-        name: "Điện thoại iPhone 14 Pro 128GB",
+        image: "./images/item4.jpg",
+        name: "iPhone 14 Pro 128GB",
         price: 3620000
     },
     {
         id: 5,
-        image: "./images/item15.jpg",
-        name: "Điện thoại Samsung Galaxy A24 6GB ",
+        image: "./images/item7.png",
+        name: "Samsung Galaxy A24 6GB ",
         price: 9820000
     },
     {
         id: 6,
-        image: "./images/item16.jpg",
-        name: "Điện thoại Vivo Y36",
+        image: "./images/item6.png",
+        name: "Điện thoại Xiaomi Y36",
         price: 6231000
     },
     {
         id: 7,
-        image: "./images/item17.jpg",
-        name: "Điện thoại Xiaomi Redmi 12C 64GB",
+        image: "./images/item7.png",
+        name: "Xiaomi Redmi 12C 64GB",
         price: 3265000
     },
     {
         id: 8,
-        image: "./images/item18.jpg",
-        name: "Điện thoại OPPO Reno8 T 5G 256GB",
+        image: "./images/item8.png",
+        name: "OPPO Reno8 T 5G 256GB",
         price: 1023000
     },
     {
         id: 9,
-        image: "./images/item19.jpg",
-        name: "Điện thoại Samsung Galaxy S23 Ultra 5G 256GB",
+        image: "./images/item9.png",
+        name: "Samsung Galaxy S23 256GB",
         price: 2030000
     },
     {
         id: 10,
-        image: "./images/item20.jpg",
+        image: "./images/item10.png",
         name: "Điện thoại realme C55 6GB",
         price: 1890000
     }

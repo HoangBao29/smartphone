@@ -12,71 +12,101 @@
     <header>
         <div class="container">
             <nav>
-                <ul>
-                    <li><a href="index.html">Trang chủ</a></li>
-                    <li><a href="#">Về chúng tôi</a></li>
-                    <li><a href="#">Liên hệ</a></li>
-                    <li><a href="profile.html">Trang cá nhân</a></li>
-                </ul>
                 <a class="logo-link" href="index.html"><img class="logo" src="./images/logo.png" alt="logo" style="width: 80%;">
                 </a>
+                <div class="search">
+                    <input type="text" placeholder="Nhập tên điện thoại, thương hiệu cần tìm...">
+                    <div>
+                        <i class="bi bi-search"></i>
+                    </div>
+                </div>
                 <ul id="account">
-                    <li><a href="login.html">Đăng nhập</a></li>
+                    <li><a id="login-css" href="login.html">Đăng nhập</a></li>
                     <span>/</span>
                     <li><a href="register.html">Đăng ký</a></li>
                 </ul>
             </nav>
         </div>
+        <div class="topbar">
+            <div class="container">
+                <ul>
+                    <li><a href="">Điện thoại</a></li>
+                    <li><a href="">SamSung</a></li>
+                    <li><a href="">Apple</a></li>
+                    <li><a href="">Xiaomi</a></li>
+                    <li><a href="">Oppo</a></li>
+                    <li><a href="">Huawei</a></li>
+                </ul>
+            </div>
+        </div>
     </header>
     <div class="main">
+        <div class="content">
             <section class="hero">
-                <div class="container"></div>
-            </section>
-            <section class="product">
                 <div class="container">
-                    <h3 class="h3">BEST SELLER</h3>
-                    <div class="wrapper-product"></div>
+                    <img src="./images/hero.jpg" alt="hero">
                 </div>
             </section>
+            <section class="product">
+                    <div class="container">
+                        <h3 class="h3">BEST SELLER</h3>
+                        <div class="wrapper-product"></div>
+                    </div>
+            </section>
             <div class="cart">
-                <p class="item-card"></p>
-                <a href="orders.html"><i class="bi bi-cart-check-fill"></i></a>
+                    <p style="color: white;" class="item-card"></p>
+                    <a href="orders.html"><i class="bi bi-cart-check-fill"></i></a>
             </div>
+            <section class="qc">
+                <div class="container">
+                    <img src="./images/quangcao.jpg" alt="quangcao">
+                </div>
+            </section>
+        </div>
     </div>
     <footer>
         <div class="container">
-            <div class="logo">
-                <div>
-                    <img src="./images/logo-footer.png" alt="logo">
-                    <img src="./images/img.png" alt="logo">
-                    <img src="./images/img2.png" alt="logo">
-                </div>
-                <p>Công ty Cổ phần Dự Kim</p>
-                <p>Địa chỉ đăng ký: Tổ dân phố Tháp, P.Đại Mỗ, Q.Nam</p>
-                <p>Email: cskh@ivy.com.vn</p>
+                <div className="wrapper-footer">
+                    <ul class="list-footer">
+                        <li>
+                            <h4>Hỗ Trợ - Dịch Vụ</h4>
+                            <p>Mua hàng trả góp</p>
+                            <p>Hướng dẫn đặt hàng</p>
+                            <p>Chính sách bảo hành</p>
+                            <p>Câu hỏi thường gặp</p>
+                        </li>
+                        <li>
+                            <h4>Bán hàng Online</h4>
+                            <p>Chăm sóc Khách Hàng</p>
+                            <p>Hỗ Trợ Kỹ thuật</p>
+                            <p>Hỗ trợ Bảo hành & Sửa chữa</p>
+                            <p>Liên hệ khối văn phòng</p>
+                        </li>
+                        <li>
+                            <h4>Tổng đài</h4>
+                            <h3>0899081701</h3>
+                            <h4>Hỗ trợ kỹ thuật</h4>
+                            <h3>0899081701</h3>
+                        </li>
+                        <li>
+                            <h4>Hỗ trợ thanh toán</h4>
+                            <ul>
+                                <div>
+                                    <li><img src="images/logo-atm.png"></img></li>
+                                    <li><img src="images/logo-jcb.png"></img></li>
+                                </div>
+                                <div>
+                                    <li><img src="images/logo-master.png"></img></li>
+                                    <li><img src="images/logo-samsungpay.png"></img></li>
+                                </div>
+                                <div>
+                                    <li><img src="images/logo-visa.png"></img></li>
+                                    <li><img src="images/logo-vnpay.png"></img></li>
+                                </div>
+                            </ul>
+                        </li>
+                    </ul>
             </div>
-            <ul class="foot__about">
-                <li>Giới thiệu</li>
-                <li>Về IVY moda</li>
-                <li>Tuyển dụng</li>
-                <li>Hệ thống cửa hàng</li>
-                <li>Hệ thống cửa hàng</li>
-            </ul>
-            <ul class="foot__about">
-                <li>Dịch vụ khách hàng</li>
-                <li>Chính sách điều khoản</li>
-                <li>Chính sách thanh toán</li>
-                <li>Chính sách thẻ thành viên</li>
-                <li>Chính sách giao nhận vận chuyển</li>
-            </ul>
-            <ul class="foot__about">
-                <li>Liên hệ</li>
-                <li>Hotline</li>
-                <li>Email</li>
-                <li>Live Chat</li>
-                <li>Messenger</li>
-            </ul>
-        </div>
     </footer>
     <script src="script.js"></script>
 </body>
