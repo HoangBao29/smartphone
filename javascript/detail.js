@@ -1,70 +1,26 @@
+var loginActive = JSON.parse(localStorage.getItem("login"));
+console.log(loginActive);
+
+var renderLogin = document.getElementById("account")
+console.log(renderLogin);
+if(loginActive !== null) {
+    renderLogin.innerHTML=`<ul id="account">
+    <li><a href="profile.html">${loginActive.name}</a></li>
+    <span>/</span>
+    <li><a onclick="handleLogout()">Đăng xuất</a></li>
+</ul>`
+}
+
 var currentLocation = window.location.href;
-var param = currentLocation.slice(-1);
+var param = currentLocation.split('=')[1];
+
+console.log(param);
+console.log(currentLocation);
 
 // fake data id = 1
 
-const data = [
-    {
-        id: 1,
-        image: "./images/item1.jpg",
-        name: "iPhone 14 Pro 128GB",
-        price: 2100000
-    },
-    {
-        id: 2,
-        image: "./images/item2.jpg",
-        name: "Xiaomi Redmi 12 4GB",
-        price: 1900000
-    },
-    {
-        id: 3,
-        image: "./images/item3.jpg",
-        name: "Samsung Galaxy A14 6GB",
-        price: 1320000
-    },
-    {
-        id: 4,
-        image: "./images/item4.jpg",
-        name: "iPhone 14 Pro 128GB",
-        price: 3620000
-    },
-    {
-        id: 5,
-        image: "./images/item7.png",
-        name: "Samsung Galaxy A24 6GB ",
-        price: 9820000
-    },
-    {
-        id: 6,
-        image: "./images/item6.png",
-        name: "Điện thoại Xiaomi Y36",
-        price: 6231000
-    },
-    {
-        id: 7,
-        image: "./images/item7.png",
-        name: "Xiaomi Redmi 12C 64GB",
-        price: 3265000
-    },
-    {
-        id: 8,
-        image: "./images/item8.png",
-        name: "OPPO Reno8 T 5G 256GB",
-        price: 1023000
-    },
-    {
-        id: 9,
-        image: "./images/item9.png",
-        name: "Samsung Galaxy S23 256GB",
-        price: 2030000
-    },
-    {
-        id: 10,
-        image: "./images/item10.png",
-        name: "Điện thoại realme C55 6GB",
-        price: 1890000
-    }
-]
+const data = JSON.parse(localStorage.getItem("smartphone"))
+console.log(data);
 
 const product = data.find((item)=>{
     return item.id == param
@@ -108,9 +64,12 @@ elementCard.innerHTML = `<div><img src=${product.image} alt="item1"></div>
     </div>
     <div class="custom-but"><button>Mua ngay</button></div>
 </div>`
+
+// render product same price 
+
 const sameProduct = data.filter((value)=>{
    return (
-        ((product.price-500000) < value.price) && ((product.price+500000) > value.price) && value.id !== product.id
+        ((product.price-2000000) < value.price) && ((product.price+2000000) > value.price) && value.id !== product.id
    )
 })
 console.log(sameProduct);
@@ -122,11 +81,33 @@ const renderProduct = sameProduct.map((item)=>{
         `<div class="card">
         <img src=${item.image} alt="item2">
         <p>${item.name}</p>
-        <p>${item.price}</p>
+        <p>${item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
     </div>`
     )
 })
 
 elementProduct.innerHTML = renderProduct.join(" ");
+
+// render product same brand
+
+const productBrand = data.filter((value)=>{
+    return (
+        value.brand === product.brand
+    )
+ })
+
+ 
+ var elementBrand = document.querySelector(".wrapper-brand");
+ const renderBrand = productBrand.map((item)=>{
+     return (
+         `<div class="card">
+         <img src=${item.image} alt="item2">
+         <p>${item.name}</p>
+         <p>${item.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")}</p>
+     </div>`
+     )
+ })
+ 
+ elementBrand.innerHTML = renderBrand.join(" ");
 
 

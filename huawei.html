@@ -2,10 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/detail.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/product.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <title>TaoBaoShop</title>
 </head>
 <body>
     <header>
@@ -40,19 +42,9 @@
         </div>
     </header>
     <div class="main">
-       <div class="container">
-            <section class="product"></section>
-            <section class="compare-product">
-                <h2 style="color: #b21216;">Sản phẩm cùng giá tương tự</h2>
-                <div class="wrapper-card"></div>
-                <h2 style="color: #b21216;">Sản phẩm cùng hãng tương tự</h2>
-                <div class="wrapper-brand"></div>
-            </section>
-            <div class="cart">
-                <p style="color: white;" class="item-card"></p>
-                <a href="orders.html"><i class="bi bi-cart-check-fill"></i></a>
-            </div>
-       </div>
+        <div class="content">
+            <div class="wrapper-product"></div>
+        </div>
     </div>
     <footer>
         <div class="container">
@@ -82,23 +74,22 @@
                             <h4>Hỗ trợ thanh toán</h4>
                             <ul>
                                 <div>
-                                    <li><img src="images/logo-atm.png"></img></li>
-                                    <li><img src="images/logo-jcb.png"></img></li>
+                                    <li><img src="./images/logo-atm.png"></img></li>
+                                    <li><img src="./images/logo-jcb.png"></img></li>
                                 </div>
                                 <div>
-                                    <li><img src="images/logo-master.png"></img></li>
-                                    <li><img src="images/logo-samsungpay.png"></img></li>
+                                    <li><img src="./images/logo-master.png"></img></li>
+                                    <li><img src="./images/logo-samsungpay.png"></img></li>
                                 </div>
                                 <div>
-                                    <li><img src="images/logo-visa.png"></img></li>
-                                    <li><img src="images/logo-vnpay.png"></img></li>
+                                    <li><img src="./images/logo-visa.png"></img></li>
+                                    <li><img src="./images/logo-vnpay.png"></img></li>
                                 </div>
                             </ul>
                         </li>
                     </ul>
-                </div>
-        </div>
+            </div>
     </footer>
+    <script src="./javascript/product.js"></script>
 </body>
-<script src="./javascript/detail.js"></script>
 </html>
